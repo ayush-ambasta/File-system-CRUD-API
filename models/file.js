@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
     }
 });
 
-fileSchema.statics.uploadFiles = multer({storage:  storage}).single('file');
+fileSchema.statics.uploadFiles = multer({storage:  storage,limits:{fileSize:10*1024*1024}}).single('file');
 fileSchema.statics.filepath = File_Path;
 
 const file=mongoose.model('file',fileSchema);

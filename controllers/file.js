@@ -5,7 +5,7 @@ const path = require('path');
 module.exports.upload=async (req,res)=>{
     try{
         File.uploadFiles(req,res,async (err)=>{
-            if(err){return res.status(500).json({success:false,msg:"multer error"})}
+            if(err){return res.status(500).json({success:false,msg:err})}
             if(req.file){
                 filename=req.file.filename;
                 await File.create({filename:filename});
@@ -60,7 +60,7 @@ module.exports.update=async(req,res)=>{
         const file=await File.findById(id);
         if(file){
             File.uploadFiles(req,res,async(err)=>{
-                if(err){return res.status(500).json({success:false,msg:"multer error"})}
+                if(err){return res.status(500).json({success:false,msg:err})}
                 
                 if(req.file){
                     //if path exists already then we have to delete this
