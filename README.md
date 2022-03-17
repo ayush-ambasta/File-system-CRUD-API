@@ -15,7 +15,7 @@ read, update and delete files.
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `file` | `file` | **Required**(File size should be less than 10Mb |
+| `file` | `file` | **Required**(File size should be less than 10Mb) |
 
 #### Get all files
 
