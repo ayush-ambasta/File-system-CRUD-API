@@ -1,7 +1,7 @@
 
 # File system CRUD API
 
-In this project an APIs is made to to upload,
+In this project an APIs is made to upload,
 read, update and delete files.
 
 
