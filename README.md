@@ -4,6 +4,12 @@
 In this project an APIs is made to upload,
 read, update and delete files.
 
+### How to Use
+1. Clone this repo.
+2. Run `npm install`
+3. start mongodb server
+4. Enter your credentials in .env file
+5. Run `node index`
 
 ## API
 
